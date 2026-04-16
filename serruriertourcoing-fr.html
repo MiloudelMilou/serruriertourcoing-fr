@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serrurier Tourcoing — Urgence 24h/24 • Intervention 20 min</title>
+<meta name="description" content="Serrurier Tourcoing disponible 24h/24 et 7j/7. Intervention rapide en 20 minutes. Ouverture de porte, dépannage serrure, remplacement cylindre. Devis gratuit.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Serrurier Tourcoing",
+  "description": "Serrurier disponible 24h/24 à Tourcoing. Intervention en 20 minutes.",
+  "telephone": "+33761791519",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tourcoing",
+    "postalCode": "59200",
+    "addressCountry": "FR"
+  },
+  "openingHours": "Mo-Su 00:00-24:00",
+  "priceRange": "€€",
+  "areaServed": ["Roubaix", "Tourcoing", "Lille", "Villeneuve-d'Ascq", "Croix", "Wasquehal"]
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --rouge: #C0392B;
+    --rouge-fonce: #96281B;
+    --rouge-vif: #E74C3C;
+    --noir: #0D0D0D;
+    --blanc: #FAFAF8;
+    --gris: #1A1A1A;
+    --gris-clair: #2C2C2C;
+    --texte-muted: #888;
+    --font-title: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--noir);
+    color: var(--blanc);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--noir);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--rouge);
+  }
+
+  .urgence-bar {
+    background: var(--rouge);
+    text-align: center;
+    padding: 10px 20px;
+    font-family: var(--font-title);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 40px;
+    text-align: center;
+  }
+
+  .badge-dispo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(192, 57, 43, 0.15);
+    border: 1px solid rgba(192, 57, 43, 0.4);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #E87C70;
+    letter-spacing: 0.04em;
+    margin-bottom: 28px;
+  }
+
+  .badge-dispo::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #E87C70;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+
+  h1 {
+    font-family: var(--font-title);
+    font-size: clamp(52px, 12vw, 88px);
+    font-weight: 900;
+    line-height: 0.92;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  h1 .ville {
+    display: block;
+    color: var(--rouge-vif);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(16px, 4vw, 20px);
+    color: #B0B0A8;
+    margin: 20px 0 36px;
+    font-weight: 400;
+  }
+
+  .hero-subtitle strong {
+    color: var(--blanc);
+    font-weight: 600;
+  }
+
+  /* CTA PRINCIPAL */
+  .btn-appel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--rouge);
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 20px 36px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 12px;
+    transition: background 0.15s, transform 0.1s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-appel:hover { background: var(--rouge-fonce); }
+  .btn-appel:active { transform: scale(0.98); }
+
+  .btn-appel .icon-tel {
+    font-size: 20px;
+  }
+
+  .btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    color: #6FCF97;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px;
+    border: 1px solid rgba(111, 207, 151, 0.3);
+    border-radius: 4px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .btn-whatsapp:hover {
+    border-color: rgba(111, 207, 151, 0.6);
+    background: rgba(111, 207, 151, 0.05);
+  }
+
+  .garantie-line {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--texte-muted);
+  }
+
+  /* STATS */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #222;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    margin-top: 48px;
+  }
+
+  .stat {
+    background: var(--gris);
+    padding: 24px 16px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: var(--font-title);
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--blanc);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--texte-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+  }
+
+  /* SERVICES */
+  .section {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+
+  .section-title {
+    font-family: var(--font-title);
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 24px;
+    color: var(--blanc);
+  }
+
+  .section-title span {
+    color: var(--rouge-vif);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .service-card {
+    background: var(--gris);
+    border: 1px solid #2C2C2C;
+    border-radius: 4px;
+    padding: 20px 16px;
+  }
+
+  .service-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .service-name {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .service-desc {
+    font-size: 13px;
+    color: var(--texte-muted);
+    line-height: 1.5;
+  }
+
+  /* ZONES */
+  .zones {
+    background: var(--gris);
+    border-top: 1px solid #2C2C2C;
+    border-bottom: 1px solid #2C2C2C;
+  }
+
+  .zones-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  .zones-title {
+    font-family: var(--font-title);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--texte-muted);
+    margin-bottom: 16px;
+  }
+
+  .zones-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .zone-tag {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: 13px;
+    color: #999;
+  }
+
+  /* REASSURANCE */
+  .reassurance {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+
+  .reassurance-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .r-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: var(--gris);
+    border: 1px solid #2C2C2C;
+    border-radius: 4px;
+    border-left: 3px solid var(--rouge);
+  }
+
+  .r-num {
+    font-family: var(--font-title);
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--rouge-vif);
+    line-height: 1;
+    min-width: 48px;
+  }
+
+  .r-text strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .r-text p {
+    font-size: 14px;
+    color: var(--texte-muted);
+  }
+
+  /* CTA BAS DE PAGE */
+  .cta-bottom {
+    background: var(--rouge);
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  .cta-bottom h2 {
+    font-family: var(--font-title);
+    font-size: clamp(32px, 8vw, 54px);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .cta-bottom p {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 28px;
+  }
+
+  .btn-appel-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    color: var(--rouge);
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 18px 36px;
+    border-radius: 4px;
+    transition: opacity 0.15s;
+  }
+
+  .btn-appel-white:hover { opacity: 0.92; }
+
+  /* FOOTER */
+  footer {
+    background: #0A0A0A;
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: #555;
+    border-top: 1px solid #1A1A1A;
+  }
+
+  footer a { color: #666; text-decoration: none; }
+
+  /* MOBILE */
+  @media (max-width: 480px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(3, 1fr); }
+    .stat-num { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="urgence-bar">
+  ⚡ Serrurier disponible maintenant — Intervention en 20 min à Tourcoing
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge-dispo">Disponible 24h/24 — 7j/7</div>
+
+    <h1>
+      Serrurier
+      <span class="ville">Tourcoing</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Urgence serrurerie ? <strong>Nous intervenons en 20 minutes.</strong><br>
+      Dépannage, ouverture de porte, remplacement de serrure.
+    </p>
+
+    <a href="tel:+33761791519" class="btn-appel">
+      <span class="icon-tel">📞</span>
+      Appeler maintenant
+    </a>
+
+    <a href="https://wa.me/33761791519" class="btn-whatsapp">
+      💬 Contacter par WhatsApp
+    </a>
+
+    <p class="garantie-line">Devis gratuit · Pas de frais de déplacement · Facture officielle</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">20<span style="font-size:18px">min</span></div>
+      <div class="stat-label">Délai d'intervention</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Disponibilité</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100<span style="font-size:18px">%</span></div>
+      <div class="stat-label">Devis gratuit</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Nos <span>services</span></h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">🚪</span>
+      <div class="service-name">Ouverture de porte</div>
+      <div class="service-desc">Clé perdue, porte claquée, clé cassée dans la serrure.</div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔐</span>
+      <div class="service-name">Changement de serrure</div>
+      <div class="service-desc">Remplacement toutes marques : Fichet, Vachette, Mul-T-Lock.</div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🛡️</span>
+      <div class="service-name">Blindage de porte</div>
+      <div class="service-desc">Renforcement anti-effraction, pose de verrous supplémentaires.</div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏠</span>
+      <div class="service-name">Serrure après cambriolage</div>
+      <div class="service-desc">Intervention d'urgence, sécurisation rapide de votre logement.</div>
+    </div>
+  </div>
+</section>
+
+<div class="zones">
+  <div class="zones-inner">
+    <div class="zones-title">Zones d'intervention</div>
+    <div class="zones-list">
+      <span class="zone-tag">Tourcoing</span>
+      <span class="zone-tag">Roubaix</span>
+      <span class="zone-tag">Lille</span>
+      <span class="zone-tag">Villeneuve-d'Ascq</span>
+      <span class="zone-tag">Croix</span>
+      <span class="zone-tag">Wasquehal</span>
+      <span class="zone-tag">Wattrelos</span>
+      <span class="zone-tag">Hem</span>
+      <span class="zone-tag">Lys-lez-Lannoy</span>
+      <span class="zone-tag">Leers</span>
+      <span class="zone-tag">Mouvaux</span>
+      <span class="zone-tag">Bondues</span>
+    </div>
+  </div>
+</div>
+
+<section class="reassurance">
+  <h2 class="section-title">Pourquoi nous <span>choisir</span></h2>
+  <div class="reassurance-items">
+    <div class="r-item">
+      <div class="r-num">01</div>
+      <div class="r-text">
+        <strong>Intervention en 20 minutes</strong>
+        <p>Notre équipe se déplace rapidement sur tout Tourcoing et les communes voisines, de jour comme de nuit.</p>
+      </div>
+    </div>
+    <div class="r-item">
+      <div class="r-num">02</div>
+      <div class="r-text">
+        <strong>Tarifs transparents</strong>
+        <p>Devis gratuit avant toute intervention. Pas de mauvaise surprise : le prix annoncé est le prix payé.</p>
+      </div>
+    </div>
+    <div class="r-item">
+      <div class="r-num">03</div>
+      <div class="r-text">
+        <strong>Artisans certifiés</strong>
+        <p>Nos serruriers sont qualifiés et assurent un travail soigné, avec garantie sur les pièces posées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-bottom">
+  <h2>Une urgence ?<br>Appelez maintenant</h2>
+  <p>Nous décrocherons dans les 30 secondes</p>
+  <a href="tel:+33761791519" class="btn-appel-white">
+    📞 07 61 79 15 19
+  </a>
+</div>
+
+<footer>
+  <p>Serrurier Tourcoing — Disponible 24h/24 · <a href="tel:+33761791519">07 61 79 15 19</a></p>
+  <p style="margin-top:8px"><a href="#">Mentions légales</a> · Tourcoing (59200) et environs</p>
+</footer>
+
+</body>
+</html>
